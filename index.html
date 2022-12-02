@@ -3,28 +3,56 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title> Entrega 2 Proyecto </title>
-    <!-- Bootstrap(CSS), Jquery (javascripts), etc... -->
-
-    <!-- para que sea index.php pueda importarlo -->
-    <!-- <link rel="stylesheet" href="../styles/mystyles.css"> -->
-    <!-- para que una consulta.php pueda importarlo -->
-    <!-- <link rel="stylesheet" href="../styles/mystyles.css"> -->
+    <title> Entrega 2 Proyecto Intro Cs de Datos </title>
 </head>
+
 <body>
     <h1 align="center">Proyecto Introducción Ciencias de Datos</h1>
+    <h3>Contexto y Motivación</h3>
     <p>En el proyecto se intentan determinar posibles factores que determinen el precio de vehículos usados vendidos en chileautos.cl</p>
-    <p>Para esto se extrajo información del sitio web mediante webscrapping usando las librerias selenium y beautifulsoup. La librería requests no es capaz de obtener el código HTML de la página debido a la forma en que está diseñada la página. El proceso de webscrapping fué bastante tedioso y no se pudo extraer toda la información que buscabamos debido a qué la página detectaba que se estaba ingresando al sitio web de forma automatizada y pedía completar una prueba de "verifica que no eres un robot", la cuál no dejaba completar, ni siquiera aunque se intentara completar la prueba manualmente.</p>
-    <p>Debido a eso se pudieron extraer solo los datos de la página principal, o sea la marca, el modelo, la transmición, el kilometraje, el año y el precio de cada publicación.</p>
+    <br>
+    <br>
+    <br>
+
     <h3>Objetivos:</h3>
     <ul>
         <li>
             Determinar qué factores explican el precio de un vehículo. Para esto se entrenaron distintos modelos de regresión y se compararon para ver qué tan buenas predicciones se pueden hacer en base a los datos que disponemos
         </li>
         <li>
-            Entre
+            Estudiar la distribución de los datos según las características estudiadas
         </li>
     </ul>
+    <br>
+    <br>
+    <br>
+
+    <h3>Datos</h3>
+    <p>Para realizar el proyecto se extrajo información del sitio web https://www.chileautos.cl/ mediante webscrapping usando las librerias selenium y beautifulsoup. La librería requests no es capaz de obtener el código HTML de la página debido a la forma en que está diseñada la página. El proceso de webscrapping fué bastante tedioso y no se pudo extraer toda la información que buscabamos debido a qué la página detectaba que se estaba ingresando al sitio web de forma automatizada y pedía completar una prueba de "verifica que no eres un robot", la cuál no dejaba completar, ni siquiera aunque se intentara completar la prueba manualmente.</p>
+    <p>Debido a eso se pudieron extraer solo los datos de la página principal, o sea la marca, el modelo, la transmisión, el kilometraje, región del país de la publicación, tipo de vendedor, el año y el precio de cada publicación.</p>
+    <br>
+    <br>
+    <br>
+    <h3>Análisis exploratorio de datos</h3>
+    <h4>Análisis Estadístico</h4>
+    <p>A través de estudiar los datos agrupándolos por región y por tipo de transmisión se pudieron llegar a las siguientes conclusiones:</p>
+    <ul>
+        <li>Hay una clara desigualdad en la cantidad de publicaciones, la región con más publicaciones es la Metropolitana por una gran diferencia. De hecho hay regiones que no tienen ninguna publicación, por lo menos en los modelos estudiados</li>
+        <li>EL promedio del precio según la región varía bastante</li>
+        <li>El tipo de vendedor más frecuente en la página web son vendedores particulares</li>
+        <li>La mayoría de los autos a la venta son mecánicos</li>
+    </ul>
+    <br>
+
+    <h4>Clustering</h4>
+    <p>Para identificar grupos o distinciones entre los datos se implementó un algoritmo de clustering.</p>
+    <p>Los resultados parecen ser más que nada una disitnción por segmentos de año, lo que tiene sentido con nuestras observaciones</p>
+    
+    <br>
+    <h4>Regresión</h4>
+    <p>Se probaron algoritmos de regresión lineal, ridge, lasso y polinomial para probar cuál se adaptaba mejor a los datos</p>
+    <p></p>
+
 </body>
 
 </html>
